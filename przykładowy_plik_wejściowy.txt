@@ -1,0 +1,5 @@
+Jan Kowalski 2.4876 PRZECIĘTNY
+Marek Nowak 1.9521 PRZECIĘTNY
+Marcin Chrobak 1.3744 NISKI
+Alex Kacperczyk 2.7379 WYSOKI
+Tymoteusz Puchacz 2.7137 WYSOKI

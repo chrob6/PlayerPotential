@@ -1,0 +1,77 @@
+[System]
+Name='FindPotential'
+Type='mamdani'
+Version=2.0
+NumInputs=5
+NumOutputs=1
+NumRules=15
+AndMethod='min'
+OrMethod='probor'
+ImpMethod='min'
+AggMethod='sum'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Zwroty_z_pilka'
+Range=[6 22]
+NumMFs=3
+MF1='dobry':'trapmf',[6 6 11.6 12.5]
+MF2='umiarkowany':'trapmf',[11 12.5 14 16]
+MF3='słaby':'trapmf',[14 15.5 22 22]
+
+[Input2]
+Name='Bieg_bez_pilki'
+Range=[6 22]
+NumMFs=3
+MF1='dobry':'trapmf',[6 6 12.3 13]
+MF2='umiarkowany':'trapmf',[11.5 13 14.5 16]
+MF3='słaby':'trapmf',[14.5 16 22 22]
+
+[Input3]
+Name='zonglerka'
+Range=[0 100]
+NumMFs=3
+MF1='słaby':'trapmf',[0 0 30 45]
+MF2='umiarkowany':'trapmf',[30 40 70 80]
+MF3='dobry':'trapmf',[70 80 100 100]
+
+[Input4]
+Name='prowadzenie_pilki'
+Range=[7 25]
+NumMFs=3
+MF1='dobry':'trapmf',[7 7 14 16]
+MF2='umiarkowany':'trapmf',[13.7 15 16.7 18.7]
+MF3='słaby':'trapmf',[17 19 25 25]
+
+[Input5]
+Name='skok_w_dal'
+Range=[100 250]
+NumMFs=3
+MF1='słaby':'trapmf',[100 100 175 185]
+MF2='umiarkowany':'trapmf',[170 185 200 215]
+MF3='dobry':'trapmf',[200 220 250 250]
+
+[Output1]
+Name='potencjal'
+Range=[0 4]
+NumMFs=3
+MF1='przeciętny':'trimf',[1 2 3]
+MF2='wysoki':'trimf',[2 3 4]
+MF3='niski':'trimf',[0 1 2]
+
+[Rules]
+1 0 0 0 0, 2 (1) : 1
+0 1 0 0 0, 2 (0.9) : 1
+0 0 3 0 0, 2 (1) : 1
+0 0 0 1 0, 2 (1) : 1
+0 0 0 0 3, 2 (0.8) : 1
+2 0 0 0 0, 1 (1) : 1
+0 2 0 0 0, 1 (0.9) : 1
+0 0 2 0 0, 1 (1) : 1
+0 0 0 2 0, 1 (1) : 1
+0 0 0 0 2, 1 (0.8) : 1
+3 0 0 0 0, 3 (1) : 1
+0 3 0 0 0, 3 (0.9) : 1
+0 0 1 0 0, 3 (1) : 1
+0 0 0 3 0, 3 (1) : 1
+0 0 0 0 1, 3 (0.8) : 1

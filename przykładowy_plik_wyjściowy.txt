@@ -1,0 +1,5 @@
+Jan Kowalski 11 11 80 15 170
+Marek Nowak 14,2 13,2 70 16 200
+Marcin Chrobak 15,9 17,84 40 16,7 167
+Alex Kacperczyk 11,2 12,02 100 14 210
+Tymoteusz Puchacz 11,67 10,8 79 13,4 204 
